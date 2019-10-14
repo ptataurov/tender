@@ -1,0 +1,19 @@
+mixin section-1(mixes)
+  include ./_imports/import
+
+  section.section-1(class=(mixes) && `${mixes}__section-1`)
+    .section-1__wrap
+
+      .section-1__card
+        .section-1__img-container
+          img.section-1__img(src=require('../../components/section-1/img/item.jpg') alt='Изображение товара')
+
+        .section-1__card-bg
+          .section-1__content
+            h4.section-1__title Будь в Tender
+            p.section-1__text Первая дизайнерская интернет-коллекция сантехники – это по-настоящему знаковое событие! Представляем вашему вниманию коллекцию Tender от AM.PM, которая была создана для того, чтобы задавать новые стандарты! Впервые на рынке – уникальные дизайнерские продукты, непревзойденное качество и максимум функциональности всего за один клик! Узнаваемые линии от собственной студии AM.PM Design идеально подойдут для продвинутых семей.
+
+            .section-1__btn-group
+              button.section-1__btn(type='button') К продуктам
+              span.section-1__noti +Подарок
+                img.section-1__gift-img(src=require('../../components/section-1/img/gift.svg') alt='Иконка подарка')

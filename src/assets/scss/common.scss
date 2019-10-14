@@ -1,0 +1,9 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+
+#tender-pg {
+	@import '~normalize.css/normalize.css';
+
+	@import 'reset';
+}

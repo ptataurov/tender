@@ -1,0 +1,23 @@
+@include importFont('SFProDisplay', 400) {
+	src: url('../../public/fonts/ttf/SFProDisplay-Regular.ttf') format('truetype'),
+		url('../../public/fonts/woff/SFProDisplay-Regular.woff') format('woff'),
+		url('../../public/fonts/woff2/SFProDisplay-Regular.woff2') format('woff2');
+}
+
+@include importFont('Intro-Book', 400) {
+	src: url('../../public/fonts/ttf/Intro-Book.ttf') format('truetype'),
+		url('../../public/fonts/woff/Intro-Book.woff') format('woff'),
+		url('../../public/fonts/woff2/Intro-Book.woff2') format('woff2');
+}
+
+@include importFont('Intro-Bold-Caps', 700) {
+	src: url('../../public/fonts/ttf/Intro-Bold-Caps.ttf') format('truetype'),
+		url('../../public/fonts/woff/Intro-Bold-Caps.woff') format('woff'),
+		url('../../public/fonts/woff2/Intro-Bold-Caps.woff2') format('woff2');
+}
+
+@include importFont('Intro-Bold', 700) {
+	src: url('../../public/fonts/ttf/Intro-Bold.ttf') format('truetype'),
+		url('../../public/fonts/woff/Intro-Bold.woff') format('woff'),
+		url('../../public/fonts/woff2/Intro-Bold.woff2') format('woff2');
+}

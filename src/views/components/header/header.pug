@@ -1,0 +1,40 @@
+mixin header(mixes)
+  include ./_imports/import
+
+  header.header(class=(mixes) && `${mixes}__header`)
+    .header__bg
+      h1.header__title Tender
+
+    .header__content
+      .header__content-wrap
+        .header__content-list
+          ul.header__list
+            -
+              const items = [
+                {
+                  num: 1,
+                  label: '<b>Первая</b> дизайнерская<br> интернет-коллекция'
+                },
+                {
+                  num: 3,
+                  label: '<b>Эксклюзивно</b><br> для «сантехники-онлайн»'
+                },
+                {
+                  num: 2,
+                  label: '<b>Инновационные</b><br> продукты<br> по привлекательной цене'
+                },
+                {
+                  num: 4,
+                  label: '<b>Стандарты качества:</b><br> 30 этапов тестирования'
+                },
+              ]
+
+            each item in items
+              li.header__list-item
+                p.header__list-item-num= item.num
+                p.header__list-item-label!= item.label
+
+        .header__logo
+          .header__logo-container
+            img.header__logo-img(src=require('../../components/header/img/logo.svg') alt='Логотип AMPM')
+            p.header__logo-label <b>Новая</b> коллекция
