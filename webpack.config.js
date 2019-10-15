@@ -159,13 +159,18 @@ const config = {
 			},
 			{
 				test: /\.pug$/,
-				loader: 'pug-loader'
+				loader: 'pug-loader',
+				options: {
+					pretty: true
+				}
 			}
 		]
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
-			$: 'jquery'
+			$: 'jquery',
+			jQuery: 'jquery',
+			'window.jQuery': 'jquery'
 		}),
 		...instances,
 		new MiniCssExtractPlugin({

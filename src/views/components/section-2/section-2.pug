@@ -2,4 +2,84 @@ mixin section-2(mixes)
   include ./_imports/import
 
   .section-2(class=(mixes) && `${mixes}__section-2`)
+    .section-2__bg-wrap
+    .section-2__wrap
+      h4.section-2__title
+        span.section-2__title-noti Специальное предложение
+        | Купи набор – <br> получи подарок!
 
+      div.section-2__slider
+
+        span.section-2__scroll-label Scroll
+          img.section-2__scroll-icon(src=require('../../components/section-2/img/icon-scroll.svg') alt='Иконка')
+        
+        button.section-2__slider-btn-next(type='button')
+          img.section-2__slider-btn-arrow(src=require('../../components/section-2/img/right-arrow.svg') alt='Иконка стрелки')
+        -
+          const items = [
+            {
+              img: require('../../components/section-2/img/item-1.png'),
+              price: '12 581',
+              subItems: ['Смеситель для умывальника', 'Смеситель для ванны и душа'],
+              gift: 'Душевой гарнитур',
+              link: 'https://santehnika-online.ru/product/dushevoy_komplekt_smesitel_am_pm_tender_dlya_vanny_s_dushem_smesitel_dlya_rakoviny_dushevoy_garnitur/'
+            },
+            {
+              img: require('../../components/section-2/img/item-2.png'),
+              price: '28 781',
+              subItems: ['Зеркало настенное с LED-подсветкой', 'База с раковиной подвесная'],
+              gift: 'Смеситель для умывальника',
+              link: 'https://santehnika-online.ru/product/mebel_dlya_vannoy_am_pm_tender_60_podvesnaya_belyy_glyanets_smesitel_v_podarok/'
+            },
+            {
+              img: require('../../components/section-2/img/item-3.png'),
+              price: '38 581',
+              subItems: ['Душевое ограждение', 'Поддон для душевого ограждения'],
+              gift: 'Душевая система',
+              link: 'https://santehnika-online.ru/product/komplekt_dushevoy_ugolok_am_pm_tender_w45g_315_090tm_poddon_dlya_dusha_dushevaya_stoyka_v_podarok/'
+            },
+            {
+              img: require('../../components/section-2/img/item-4.png'),
+              price: '16 991',
+              subItems: ['Унитаз-компакт'],
+              gift: 'Стойка с туалетной щеткой',
+              link: 'https://santehnika-online.ru/product/komplekt_unitaz_kompakt_am_pm_tender_c45a8700sc_bezobodkovyy_ershik_v_podarok/'
+            },
+            {
+              img: require('../../components/section-2/img/item-5.png'),
+              price: '23 992',
+              subItems: ['Комплект: инсталляция, унитаз, клавиша'],
+              gift: 'Стойка с туалетной щеткой <br> Держатель для бумаги',
+              link: 'https://santehnika-online.ru/product/komplekt_am_pm_tender_is345a1739_ershik_i_derzhatel_tualetnoy_bumagi_v_podarok/'
+            },
+            {
+              img: require('../../components/section-2/img/item-6.png'),
+              price: '23 181',
+              subItems: ['Ванна акриловая', 'Каркас для ванны'],
+              gift: 'Душевой комплект',
+              link: 'https://santehnika-online.ru/product/akrilovaya_vanna_am_pm_tender_170x70_s_karkasom_dushevoy_garnitur_v_podarok/'
+            }
+          ]
+
+        ul.section-2__slider-items.owl-carousel        
+          each item in items
+            li.section-2__slide
+              .section-2__slide-img-container
+                img.section-2__slide-img(src=`${item.img}`)
+
+              .section-2__slide-content
+                p.section-2__slide-price= `${item.price} ₽`
+                p.section-2__slide-title AM.PM TENDER
+                ul.section-2__slide-sub-items
+                  each subItem in item.subItems
+                    li.section-2__slide-sub-item!= subItem
+
+                .section-2__slide-gift 
+                  p.section-2__slide-gift-label +Подарок
+                  p.section-2__slide-gift-name!= item.gift
+
+                a.section-2__slide-link(href=`${item.link}` target='_blank') Посмотреть
+
+      a.section-2__link(href='https://santehnika-online.ru/brands/ampm/tender' target='_blank') Все товары
+
+            

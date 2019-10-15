@@ -1,0 +1,49 @@
+mixin section-3(mixes)
+  include ./_imports/import
+
+  .section-3(class=(mixes) && `${mixes}__section-3`)
+
+    .section-3__wrap
+      h4.section-3__title Эксклюзивный <br> дизайн
+
+      .section-3__gallery
+        span.section-3__scroll-label Scroll
+          img.section-3__scroll-icon(src=require('../../components/section-3/img/icon-scroll.svg') alt='Иконка')
+
+        button.section-3__btn-more(type='button')
+          include ../../components/section-3/img/right-arrow.svg
+          | Еще
+
+        div.section-3__slider.owl-carousel
+          ul.section-3__img-list
+            li.section-3__single-container
+              img.section-3__img(src=require('../../components/section-3/img/item-1.jpg') alt='Изображение')
+            li.section-3__double-container.section-3--mt 
+              img.section-3__img(src=require('../../components/section-3/img/item-2.jpg') alt='Изображение')
+              img.section-3__img(src=require('../../components/section-3/img/item-3.jpg') alt='Изображение')
+
+          ul.section-3__img-list
+            li.section-3__double-container
+              img.section-3__img(src=require('../../components/section-3/img/item-4.jpg') alt='Изображение')
+              img.section-3__img(src=require('../../components/section-3/img/item-5.jpg') alt='Изображение')
+            li.section-3__single-container.section-3--mt 
+              img.section-3__img(src=require('../../components/section-3/img/item-6.jpg') alt='Изображение')
+          
+          ul.section-3__img-list
+            li.section-3__single-container
+              img.section-3__img(src=require('../../components/section-3/img/item-7.jpg') alt='Изображение')
+            li.section-3__single-container.section-3--mt 
+              img.section-3__img(src=require('../../components/section-3/img/item-8.jpg') alt='Изображение')
+
+        ul.section-3__mobile-slider.owl-carousel
+          li.section-3__slide
+            img.section-3__img(src=require('../../components/section-3/img/item-mob-1.jpg') alt='Изображение')
+          li.section-3__slide
+            img.section-3__img(src=require('../../components/section-3/img/item-mob-2.jpg') alt='Изображение')
+          li.section-3__slide
+            img.section-3__img(src=require('../../components/section-3/img/item-mob-3.jpg') alt='Изображение')
+          li.section-3__slide
+            img.section-3__img(src=require('../../components/section-3/img/item-mob-4.jpg') alt='Изображение')
+          li.section-3__slide
+            img.section-3__img(src=require('../../components/section-3/img/item-mob-5.jpg') alt='Изображение')
+
