@@ -34,7 +34,7 @@ mixin header(mixes)
                 p.header__list-item-num= item.num
                 p.header__list-item-label!= item.label
 
-        .header__logo
+        .header__logo(data-target='.section-1__card')
           .header__logo-container
             img.header__logo-img(src=require('../../components/header/img/logo.svg') alt='Логотип AMPM')
             p.header__logo-label <b>Новая</b> коллекция

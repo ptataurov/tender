@@ -52,7 +52,7 @@
 		font-size: 12px;
 		line-height: 1;
 		transform: translateY(-100%);
-		animation: scrollAnim 3s cubic-bezier(0, 0.8, 1, 0.22) infinite;
+		animation: scrollAnim 2.5s cubic-bezier(0, 0.8, 1, 0.22) infinite;
 	}
 
 	.section-3__scroll-icon {
@@ -219,11 +219,7 @@
 			opacity: 0;
 		}
 
-		20% {
-			opacity: 1;
-		}
-
-		80% {
+		50% {
 			opacity: 1;
 		}
 

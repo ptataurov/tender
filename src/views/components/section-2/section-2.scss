@@ -18,7 +18,7 @@
 					rgba(#415167, 1),
 					rgba(#415167, 0.6) 10%
 				);
-				transform: translate(90%, -50%);
+				transform: translate(92%, -50%);
 				opacity: 1;
 				content: '';
 			}
@@ -91,7 +91,7 @@
 		font-size: 12px;
 		line-height: 1;
 		transform: translateY(-100%);
-		animation: scrollAnim 3s cubic-bezier(0, 0.8, 1, 0.22) infinite;
+		animation: scrollAnim 2.5s cubic-bezier(0, 0.8, 1, 0.22) infinite;
 	}
 
 	.section-2__scroll-icon {
